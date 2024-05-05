@@ -1,10 +1,13 @@
 const { ethers } = require("hardhat");
 
-const gameAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
-const contractName = "Game1";
+const gameAddress = "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9";
+const contractName = "Game2";
 
 async function main() {
     const game = await ethers.getContractAt(contractName, gameAddress);
+
+    await game.setX(25);
+    await game.setY(25);
 
     const tx = await game.win();
     const receipt = await tx.wait();
