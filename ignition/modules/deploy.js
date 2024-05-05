@@ -1,5 +1,5 @@
 const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
-const contractName = "Game3";
+const contractName = "Game4";
 
 module.exports = buildModule("LockModule", (m) => {
   const game = m.contract(contractName);
